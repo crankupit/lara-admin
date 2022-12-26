@@ -15,13 +15,22 @@ class LoginController extends Controller
 
     public function login(Request $request)
     {
-        dd('User login request received');
+        $this->validate($request, [
+            'email' => 'required|email',
+            'password' => 'required'
+        ]);
+
+        $credentials = $request->only('email', 'password');
+
+        if (auth()->guard('user')->attempt($credentials)) {
+            return redirect()->route('getUserHome');
+        }
+        return redirect()->back()->withInput($request->only('email'));
     }
 
     public function logout()
     {
-        dd('User logout request received');
-        // auth()->guard('user')->logout();
-        // return redirect()->route('getUserLogin');
+        auth()->guard('user')->logout();
+        return redirect()->route('getUserLogin');
     }
 }

@@ -14,6 +14,6 @@ class RegisterController extends Controller
 
     public function register()
     {
-        dd('Admin register request received');
+        dd('Register request received, Add the logic in App\Http\Controllers\Admin\RegisterController.php');
     }
 }
