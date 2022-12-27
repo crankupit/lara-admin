@@ -89,7 +89,7 @@ return [
     |
     */
 
-    'migrations' => 'migrations/user',
+    'migrations' => 'migrations',
 
     /*
     |--------------------------------------------------------------------------
