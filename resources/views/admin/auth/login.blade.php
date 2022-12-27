@@ -25,5 +25,18 @@
                     <button type="submit">Login</button>
                 </div>
             </form>
+            <div>
+                <div style="margin: 40px">
+                    <a style="margin: 40px" href={{ route('getWelcome') }} as="button">
+                        User Welcome
+                    </a>
+                    <a style="margin: 40px" href={{ route('getAdminRegister') }} as="button">
+                        Admin Register
+                    </a>
+                    <a style="margin: 40px" href={{ route('getAdminHome') }} as="button">
+                        Admin Dashboard Home
+                    </a>
+                </div>
+            </div>
         </div>
 </x-app>

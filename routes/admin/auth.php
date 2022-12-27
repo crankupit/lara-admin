@@ -26,4 +26,4 @@ Route::get('/logout', [LoginController::class, "logout"])->name('adminLogout');
 
 Route::get('/home', function () {
     return view('admin.home');
-})->name('getAdminHome');
+})->middleware('auth:admin')->name('getAdminHome');

@@ -11,6 +11,7 @@
 </head>
 
 <body>
+    {{-- This content can be wrapped with auth if needed. --}}
     {{ $slot }}
 </body>
 

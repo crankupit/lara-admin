@@ -25,5 +25,18 @@
                     <button type="submit">Login</button>
                 </div>
             </form>
+            <div>
+                <div style="margin: 40px">
+                    <a style="margin: 40px" href={{ route('getWelcome') }} as="button">
+                        User Welcome
+                    </a>
+                    <a style="margin: 40px" href={{ route('getUserRegister') }} as="button">
+                        User Register
+                    </a>
+                    <a style="margin: 40px" href={{ route('getUserHome') }} as="button">
+                        User Dashboard Home
+                    </a>
+                </div>
+            </div>
         </div>
 </x-app>

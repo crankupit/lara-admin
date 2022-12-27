@@ -16,4 +16,4 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     // dd(auth()->guard());
     return view('welcome');
-});
+})->name('getWelcome');
